@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <iostream.h> 
+//#include <iostream.h>
+#include <iostream> //for gcc complier error by glenn 20150204_1640  
 struct addressList 
 {
     char ext[15];
@@ -136,14 +137,14 @@ void StrcpySwapStrings(int j)
            for(number = 0; number < 35; ++number) 
 		   {
 			   
-				if(!stricmp(letter,"All"))
+//				if(!stricmp(letter,"All"))  //marked for no declared error  by glenn 20150204_1640   
 				{
 				printf("%s ", member[number].firstname);
 				printf("%s", member[number].ext);
 				printf("%s", member[number].tel);
 				}
 				//else if(!strncmp(member[number].firstname,letter,1))
-			   else if((member[number].firstname[0]==letter[0]-32)||(member[number].firstname[0]==letter[0]))
+//			   else if((member[number].firstname[0]==letter[0]-32)||(member[number].firstname[0]==letter[0]))
 				{
 				printf("%s ", member[number].firstname);
 				printf("%s", member[number].ext);
